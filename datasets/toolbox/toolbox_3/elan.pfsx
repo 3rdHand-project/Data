@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences version="1.1"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.mpi.nl/tools/elan/Prefs_v1.1.xsd">
+    <prefList key="MultiTierViewer.TierOrder">
+        <String>TS /human/rh /toolbox/side_front</String>
+        <String>TS /human/rh /toolbox/side_left</String>
+        <String>TS /human/rh /toolbox/side_right</String>
+        <String>TS /human/rh /toolbox/side_back</String>
+        <String>TS /human/rh /toolbox/handle</String>
+        <String>TS /human/lh /toolbox/side_front</String>
+        <String>TS /human/lh /toolbox/side_right</String>
+        <String>TS /human/lh /toolbox/side_back</String>
+        <String>TS /human/lh /toolbox/handle</String>
+        <String>TS /human/lh /toolbox/side_left</String>
+        <String>CE /toolbox/side_front /toolbox/side_left</String>
+        <String>CE /toolbox/side_front /toolbox/side_back</String>
+        <String>CE /toolbox/side_front /toolbox/side_right</String>
+        <String>CE /toolbox/side_front /toolbox/handle</String>
+        <String>CE /toolbox/side_left /toolbox/side_back</String>
+        <String>CE /toolbox/side_left /toolbox/side_right</String>
+        <String>CE /toolbox/side_left /toolbox/handle</String>
+        <String>CE /toolbox/side_back /toolbox/side_right</String>
+        <String>CE /toolbox/side_back /toolbox/handle</String>
+        <String>CE /toolbox/side_right /toolbox/handle</String>
+    </prefList>
+    <pref key="ActiveVideoRecognizerName">
+        <String>Human motion analysis and annotation</String>
+    </pref>
+    <pref key="LayoutManager.VisibleMultiTierViewer">
+        <String>mpi.eudico.client.annotator.viewer.TimeLineViewer</String>
+    </pref>
+    <prefGroup key="Text-to-Speech alignment">
+        <pref key="model">
+            <String>English</String>
+        </pref>
+    </prefGroup>
+    <prefGroup key="Human motion analysis and annotation">
+        <pref key="output_video_resolution">
+            <String>half</String>
+        </pref>
+        <pref key="background_image">
+            <String>false</String>
+        </pref>
+        <pref key="use_single_cluster">
+            <String>false</String>
+        </pref>
+        <pref key="speed_threshold">
+            <String>normal</String>
+        </pref>
+        <pref key="update_rate">
+            <Float>100.0</Float>
+        </pref>
+        <pref key="input_video">
+            <String>///home/bais/data/mocaplab/segments/3rdHand/seg_toolbox_2_3/z.pg_cam_13400115.14-09-05--18-42-50.264.mp4</String>
+        </pref>
+        <pref key="logging_level">
+            <String>normal</String>
+        </pref>
+        <prefGroup key="input_xml"/>
+        <pref key="change_threshold">
+            <Float>30.0</Float>
+        </pref>
+    </prefGroup>
+    <pref key="LayoutManager.SplitPaneDividerLocation">
+        <Int>1</Int>
+    </pref>
+    <pref key="LayoutManager.SelectedTabIndex">
+        <Int>7</Int>
+    </pref>
+    <prefGroup key="TierColors">
+        <pref key="CE /toolbox/side_front /toolbox/side_left">
+            <Object class="java.awt.Color">160,90,0</Object>
+        </pref>
+        <pref key="TS /human/lh /toolbox/handle">
+            <Object class="java.awt.Color">0,160,90</Object>
+        </pref>
+        <pref key="TS /human/lh /toolbox/side_back">
+            <Object class="java.awt.Color">90,90,160</Object>
+        </pref>
+        <pref key="TS /human/lh /toolbox/side_front">
+            <Object class="java.awt.Color">0,0,160</Object>
+        </pref>
+        <pref key="TS /human/rh /toolbox/side_back">
+            <Object class="java.awt.Color">160,0,0</Object>
+        </pref>
+        <pref key="CE /toolbox/side_front /toolbox/side_right">
+            <Object class="java.awt.Color">160,160,0</Object>
+        </pref>
+        <pref key="CE /toolbox/side_back /toolbox/side_right">
+            <Object class="java.awt.Color">90,160,160</Object>
+        </pref>
+        <pref key="CE /toolbox/side_left /toolbox/handle">
+            <Object class="java.awt.Color">90,160,0</Object>
+        </pref>
+        <pref key="TS /human/rh /toolbox/side_left">
+            <Object class="java.awt.Color">0,160,0</Object>
+        </pref>
+        <pref key="TS /human/rh /toolbox/handle">
+            <Object class="java.awt.Color">90,90,0</Object>
+        </pref>
+        <pref key="CE /toolbox/side_left /toolbox/side_right">
+            <Object class="java.awt.Color">90,0,160</Object>
+        </pref>
+        <pref key="CE /toolbox/side_front /toolbox/side_back">
+            <Object class="java.awt.Color">0,90,0</Object>
+        </pref>
+        <pref key="CE /toolbox/side_right /toolbox/handle">
+            <Object class="java.awt.Color">0,0,90</Object>
+        </pref>
+        <pref key="CE /toolbox/side_back /toolbox/handle">
+            <Object class="java.awt.Color">160,0,160</Object>
+        </pref>
+        <pref key="CE /toolbox/side_left /toolbox/side_back">
+            <Object class="java.awt.Color">0,90,160</Object>
+        </pref>
+        <pref key="TS /human/lh /toolbox/side_left">
+            <Object class="java.awt.Color">0,90,90</Object>
+        </pref>
+        <pref key="CE /toolbox/side_front /toolbox/handle">
+            <Object class="java.awt.Color">160,160,90</Object>
+        </pref>
+        <pref key="TS /human/lh /toolbox/side_right">
+            <Object class="java.awt.Color">0,160,160</Object>
+        </pref>
+        <pref key="TS /human/rh /toolbox/side_right">
+            <Object class="java.awt.Color">90,0,0</Object>
+        </pref>
+        <pref key="TS /human/rh /toolbox/side_front">
+            <Object class="java.awt.Color">160,90,160</Object>
+        </pref>
+    </prefGroup>
+    <pref key="FrameLocation">
+        <Object class="java.awt.Point">1930,-3</Object>
+    </pref>
+    <pref key="SelectionBeginTime">
+        <Long>94418</Long>
+    </pref>
+    <pref key="LayoutManager.CurrentMode">
+        <Int>1</Int>
+    </pref>
+    <pref key="MediaTime">
+        <Long>74530</Long>
+    </pref>
+    <pref key="ExportTabDialog.SelectTiersMode">
+        <String>Tier</String>
+    </pref>
+    <prefList key="ExportTabDialog.TierOrder">
+        <String>TS /human/rh /toolbox/side_front</String>
+        <String>TS /human/rh /toolbox/side_left</String>
+        <String>TS /human/rh /toolbox/side_right</String>
+        <String>TS /human/rh /toolbox/side_back</String>
+        <String>TS /human/rh /toolbox/handle</String>
+        <String>TS /human/lh /toolbox/side_front</String>
+        <String>TS /human/lh /toolbox/side_right</String>
+        <String>TS /human/lh /toolbox/side_back</String>
+        <String>TS /human/lh /toolbox/handle</String>
+        <String>TS /human/lh /toolbox/side_left</String>
+        <String>CE /toolbox/side_front /toolbox/side_left</String>
+        <String>CE /toolbox/side_front /toolbox/side_back</String>
+        <String>CE /toolbox/side_front /toolbox/side_right</String>
+        <String>CE /toolbox/side_front /toolbox/handle</String>
+        <String>CE /toolbox/side_left /toolbox/side_back</String>
+        <String>CE /toolbox/side_left /toolbox/side_right</String>
+        <String>CE /toolbox/side_left /toolbox/handle</String>
+        <String>CE /toolbox/side_back /toolbox/side_right</String>
+        <String>CE /toolbox/side_back /toolbox/handle</String>
+        <String>CE /toolbox/side_right /toolbox/handle</String>
+    </prefList>
+    <pref key="FrameSize">
+        <Object class="java.awt.Dimension">1928,1075</Object>
+    </pref>
+    <prefList key="ExportTabDialog.selectedTiers">
+        <String>TS /human/rh /toolbox/side_front</String>
+        <String>TS /human/rh /toolbox/side_left</String>
+        <String>TS /human/rh /toolbox/side_right</String>
+        <String>TS /human/rh /toolbox/side_back</String>
+        <String>TS /human/rh /toolbox/handle</String>
+        <String>TS /human/lh /toolbox/side_front</String>
+        <String>TS /human/lh /toolbox/side_right</String>
+        <String>TS /human/lh /toolbox/side_back</String>
+        <String>TS /human/lh /toolbox/handle</String>
+        <String>TS /human/lh /toolbox/side_left</String>
+        <String>CE /toolbox/side_front /toolbox/side_left</String>
+        <String>CE /toolbox/side_front /toolbox/side_back</String>
+        <String>CE /toolbox/side_front /toolbox/side_right</String>
+        <String>CE /toolbox/side_front /toolbox/handle</String>
+        <String>CE /toolbox/side_left /toolbox/side_back</String>
+        <String>CE /toolbox/side_left /toolbox/side_right</String>
+        <String>CE /toolbox/side_left /toolbox/handle</String>
+        <String>CE /toolbox/side_back /toolbox/side_right</String>
+        <String>CE /toolbox/side_back /toolbox/handle</String>
+        <String>CE /toolbox/side_right /toolbox/handle</String>
+    </prefList>
+    <pref key="MultiTierViewer.ActiveTierName">
+        <String>CE /toolbox/side_front /toolbox/side_left</String>
+    </pref>
+    <pref key="LayoutManager.ControlPanelWidth">
+        <Int>272</Int>
+    </pref>
+    <pref key="TimeScaleBeginTime">
+        <Long>70150</Long>
+    </pref>
+    <prefList key="MultiTierViewer.HiddenTiers"/>
+    <prefList key="ExportTabDialog.HiddenTiers"/>
+    <pref key="ActiveAudioRecognizerName">
+        <String>Text-to-Speech alignment</String>
+    </pref>
+    <pref key="SelectionEndTime">
+        <Long>533320</Long>
+    </pref>
+</preferences>

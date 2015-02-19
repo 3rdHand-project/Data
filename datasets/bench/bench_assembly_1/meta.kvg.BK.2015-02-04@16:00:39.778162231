@@ -1,0 +1,7 @@
+object { name = "bench"
+  part { name = "leg1", type = "leg", hid = 0, sid = 1 }
+  part { name = "leg2", type = "leg", hid = 0, sid = 2 }
+  part { name = "leg3", type = "leg", hid = 0, sid = 3 }
+  part { name = "leg4", type = "leg", hid = 0, sid = 4 }
+  part { name = "seating", type = "seating", hid = 0, sid = 5 }
+}

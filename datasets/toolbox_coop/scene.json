@@ -1,0 +1,65 @@
+
+{
+	"agents" : 
+	{
+		"/human/lh/index" : 
+		{
+			"type" : "digit"
+		},
+		"/human/lh/middle" : 
+		{
+			"type" : "digit"
+		},
+		"/human/lh/thumb" : 
+		{
+			"type" : "digit"
+		},
+		"/human/rh/index" : 
+		{
+			"type" : "digit"
+		},
+		"/human/rh/middle" : 
+		{
+			"type" : "digit"
+		},
+		"/human/rh/thumb" : 
+		{
+			"type" : "digit"
+		},
+		"/human/th/index" : 
+		{
+			"type" : "digit"
+		},
+		"/human/th/middle" : 
+		{
+			"type" : "digit"
+		},
+		"/human/th/thumb" : 
+		{
+			"type" : "digit"
+		}
+	},
+	"objects" : 
+	{
+		"/toolbox/side_front" : 
+		{
+			"mesh" : "ToolboxPart2.stl",
+			"transformation" : 
+			[
+				[ -0.02, 0.059999999999999998, -0.0080000000000000002 ],
+				[ 0, 0, 0, -1 ]
+			],
+			"type" : "side_long"
+		},
+		"/toolbox/side_left" : 
+		{
+			"mesh" : "ToolboxPart3.stl",
+			"transformation" : 
+			[
+				[ -7.3478807948841184e-18, 0.059999999999999998, -0.0080000000000000002 ],
+				[ 0, 0, 1, -6.123233995736766e-17 ]
+			],
+			"type" : "side_short"
+		}
+	}
+}

@@ -1,0 +1,13 @@
+body /bottle { }
+shape sh/task/bottle (/bottle) {
+  #type = -1
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/bottle (/bottle) {
+  type = 4
+  rel = <T t(-.03 0 .06) t(0 0 .008) d(90 0 1 0)>
+  size = [ 0 0 .23 .06 ]
+  contact
+}

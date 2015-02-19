@@ -1,0 +1,13 @@
+body /sbox { }
+shape sh/task/sbox (/sbox) {
+  #type = -1
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/sbox (/sbox) {
+  type = 0
+  rel = <T t(-.0298 0 .0305)>
+  size = [ .075 .11 .045 0 ]
+  contact
+}

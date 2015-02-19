@@ -1,0 +1,29 @@
+body /toolbox/side_front {}
+shape sh/task/toolbox/side_front (/toolbox/side_front) {
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/toolbox/side_front (/toolbox/side_front) {
+  type = 3
+  mesh = 'ToolboxPart2.stl'
+  meshscale = .001
+  rel = <T t(.02 -.06 .008)>
+  rel_includes_mesh_center
+  contact
+}
+
+body /toolbox/side_left {}
+shape sh/task/toolbox/side_left (/toolbox/side_left) {
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/toolbox/side_left (/toolbox/side_left) {
+  type = 3
+  mesh = 'ToolboxPart3.stl'
+  meshscale = .001
+  rel = <T t(0 .06 .008) d(180 0 0 1)>
+  rel_includes_mesh_center
+  contact
+}

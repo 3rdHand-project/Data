@@ -1,0 +1,16 @@
+agents {
+  /human/rh/thumb  = { type = "digit", rn = 0, hid = 0, sid = 0 }
+  /human/rh/index  = { type = "digit", rn = 1, hid = 0, sid = 1 }
+  /human/rh/middle = { type = "digit", rn = 2, hid = 0, sid = 2 }
+  /human/lh/thumb  = { type = "digit", rn = 3, hid = 1, sid = 0 }
+  /human/lh/index  = { type = "digit", rn = 4, hid = 1, sid = 1 }
+  /human/lh/middle = { type = "digit", rn = 5, hid = 1, sid = 2 }
+}
+
+objects {
+  /toolbox/side_left  = { type = "side_short",  rn = 6,  hid = 2, sid = 0 }
+  /toolbox/side_front = { type = "side_long",   rn = 7,  hid = 2, sid = 1 }
+  /toolbox/side_back  = { type = "side_long",   rn = 8,  hid = 2, sid = 2 }
+  /toolbox/side_right = { type = "side_short",  rn = 9,  hid = 3, sid = 0 }
+  /toolbox/handle     = { type = "handle",      rn = 10, hid = 3, sid = 1 }
+}

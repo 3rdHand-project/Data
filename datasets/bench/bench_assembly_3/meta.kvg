@@ -1,0 +1,7 @@
+objects {
+  /bench/leg1    = { type = "leg",     rn = 1, hid = 0, sid = 1 }
+  /bench/leg2    = { type = "leg",     rn = 2, hid = 0, sid = 2 }
+  /bench/leg3    = { type = "leg",     rn = 3, hid = 0, sid = 3 }
+  /bench/leg4    = { type = "leg",     rn = 4, hid = 0, sid = 4 }
+  /bench/seating = { type = "seating", rn = 5, hid = 0, sid = 5, root }
+}

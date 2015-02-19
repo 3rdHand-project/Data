@@ -1,0 +1,63 @@
+# The 3rdHandData repository of the MLR group
+
+This repository contains the motion data captured by the MLR setup. 
+
+Although the setup records multiple modalities of data (including videos and
+depth images), this repository only contains the motion captured by the
+Polhemus G4 hardware.
+
+## Installation
+
+No installation is required.
+Installation may be required for programs which make use of this data.
+
+## Documentation
+
+### Models
+
+The models/ folder contains object models and meshes.  Most files here are
+written in our ORS (Open Robot Simulator) format.  Eventually these will be
+converted to a more standard format, but for the time being you shouldn't care
+too much about these files;  they don't contain motion data, and will be used
+automatically by other programs, e.g. the visualization tools which we also
+provide.
+
+### Data
+
+The data/ folder contains the motion data. Each subfolder of data/ refers to
+one specific demonstration and will contain the following files:
+
+ * poses.dat and poses.dat.times contain the actual data and the respective
+   timestamps. Poses.dat is structured as a sequence of matrices surrounded by
+   squared brackets.  Each matrix indicates a frame of data and contains as
+   many rows as sensors and 7 columns. The columns represent (in order) the x,
+   y and z coordinates of the sensor (in meters), and the w, x, y and z
+   parameters of the quaternion describing the sensor's orientation.  A row of
+   all 0's indicates missing data (either that sensor doesn't exist in this
+   demonstration, or that specific frame for that sensor was not registered).
+   The association between rows and sensors is described in meta.kvg.  Each row
+   in timestamp in poses.dat.times indicates the timestamp of one of the data
+   frames contained in poses.dat.
+
+ * meta.kvg contains metadata about the environment, such as associations
+   between sensors and objects/agents in the environment, and the hierarchical
+   structure of agents and objects.  The row in the data matrix relative to
+   each sensor is written as the corresponding property 'rn').
+
+ * world.ors contains the environment model in the ORS format, and includes the
+   objects models relevant for this demonstration.
+
+Optionally, each recording might also have the following files:
+
+ * elan* and ann* are annotation files which contain ground truth and labels
+   for our learning algorithms.  Not all demonstrations are annotated.
+
+ * data.json is a more standard and unified format for the data which replaces
+   all of the above; it is still under development and shouldn't be used at the
+   current state.
+
+If you intend to use this data in your program, you will most likely only be
+interested in poses.dat, poses.dat.times and meta.kvg (you'll want to extract
+the row number from meta.kvg manually and use it in your program). In future
+releases of this repository, data.json will contain all the respective
+information.

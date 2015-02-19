@@ -1,0 +1,105 @@
+body /chair/seating {}
+shape sh/task/chair/seating (/chair/seating) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/chair/seating (/chair/seating) {
+  type = 3
+  mesh = 'chair_seating.stl'
+  meshscale = .001
+  rel = <T q(0 0 .707 .707)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /chair/back {}
+shape sh/task/chair/back (/chair/back) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/chair/back (/chair/back) {
+  type = 3
+  mesh = 'chair_back.stl'
+  meshscale = .001
+# not-inv, translation first
+  rel = <T t(0 .335 -.015) q(-1 0 0 0)>
+  # rel = <T t(0 -.015 0) q(.5 -.5 .5 .5)>
+# not-inv, rotation first
+  # rel = <T q(.5 -.5 .5 .5) t(0 -.015 0)>
+# rotation first
+  # rel = <T t(0 .015 0) q(-.5 -.5 .5 .5)>
+# translation first
+  # rel = <T t(0 0 .015) q(-.5 -.5 .5 .5)>
+# actually works
+  # rel = <T t(-.015 0 0) q(-.5 -.5 .5 -.5)>
+  # rel = <T t(-.015 0 0) q(.5 -.5 .5 .5)>
+  # rel = <T t(-.015 0 0) q(.5 -.5 -.5 .5)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /chair/leg1 {}
+shape sh/task/chair/leg1 (/chair/leg1) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/chair/leg1 (/chair/leg1) {
+  type = 3
+  mesh = 'chair_leg.stl'
+  meshscale = .001
+  # rel = <T q(0 0 .707 .707)>
+  rel = <T t(0 .28 0) q(0 0 -.707 .707)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /chair/leg2 {}
+shape sh/task/chair/leg2 (/chair/leg2) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/chair/leg2 (/chair/leg2) {
+  type = 3
+  mesh = 'chair_leg.stl'
+  meshscale = .001
+  # rel = <T q(0 0 .707 .707)>
+  rel = <T t(0 .28 0) q(0 0 -.707 .707)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /chair/leg3 {}
+shape sh/task/chair/leg3 (/chair/leg3) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/chair/leg3 (/chair/leg3) {
+  type = 3
+  mesh = 'chair_leg.stl'
+  meshscale = .001
+  # rel = <T q(0 0 .707 .707)>
+  rel = <T t(0 .28 0) q(0 0 -.707 .707)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /chair/leg4 {}
+shape sh/task/chair/leg4 (/chair/leg4) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/chair/leg4 (/chair/leg4) {
+  type = 3
+  mesh = 'chair_leg.stl'
+  meshscale = .001
+  # rel = <T q(0 0 .707 .707)>
+  rel = <T t(0 .28 0) q(0 0 -.707 .707)>
+  # rel_includes_mesh_center
+  contact
+}

@@ -1,0 +1,20 @@
+ TS /human/rh /toolbox/side_front { lock { from=2392  to=2505 }  lock { from=2915  to=3106 }  lock { from=4994  to=5441 }  lock { from=8312  to=8818 }  lock { from=10429  to=10480 }  lock { from=12406  to=12530 }  lock { from=12557  to=12738 }  lock { from=15135  to=15284 }  lock { from=15449  to=16039 }  lock { from=18554  to=18720 }  lock { from=21036  to=21779 } }
+ TS /human/rh /toolbox/side_left { lock { from=4994  to=5441 }  lock { from=8312  to=8818 }  lock { from=10429  to=10480 }  lock { from=12406  to=12530 }  lock { from=12557  to=12738 }  lock { from=15135  to=15284 }  lock { from=15449  to=16039 }  lock { from=18554  to=18720 }  lock { from=21036  to=21779 } }
+ TS /human/rh /toolbox/side_right { lock { from=16151  to=16579 }  lock { from=16722  to=16816 }  lock { from=18554  to=18720 }  lock { from=21036  to=21779 } }
+ TS /human/rh /toolbox/side_back { lock { from=5588  to=5765 }  lock { from=8312  to=8818 }  lock { from=10429  to=10480 }  lock { from=12406  to=12530 }  lock { from=12557  to=12738 }  lock { from=15135  to=15284 }  lock { from=15449  to=16039 }  lock { from=18554  to=18720 }  lock { from=21036  to=21779 } }
+ TS /human/rh /toolbox/handle { lock { from=9124  to=9451 }  lock { from=10429  to=10480 }  lock { from=12406  to=12530 }  lock { from=12557  to=12738 }  lock { from=15135  to=15284 }  lock { from=15449  to=16039 }  lock { from=18554  to=18720 }  lock { from=21036  to=21779 } }
+ TS /human/lh /toolbox/side_front { lock { from=12172  to=12329 }  lock { from=12518  to=12750 }  lock { from=15240  to=15453 }  lock { from=16722  to=16816 }  lock { from=21036  to=21779 } }
+ TS /human/lh /toolbox/side_right { lock { from=21036  to=21779 } }
+ TS /human/lh /toolbox/side_back { lock { from=12172  to=12329 }  lock { from=12518  to=12750 }  lock { from=15240  to=15453 }  lock { from=16722  to=16816 }  lock { from=21036  to=21779 } }
+ TS /human/lh /toolbox/handle { lock { from=12172  to=12329 }  lock { from=12518  to=12750 }  lock { from=15240  to=15453 }  lock { from=16722  to=16816 }  lock { from=21036  to=21779 } }
+ TS /human/lh /toolbox/side_left { lock { from=2761  to=3106 }  lock { from=12172  to=12329 }  lock { from=12518  to=12750 }  lock { from=15240  to=15453 }  lock { from=16722  to=16816 }  lock { from=21036  to=21779 } }
+ CE /toolbox/side_front /toolbox/side_left { lock { from=3107  to=22547 } }
+ CE /toolbox/side_front /toolbox/side_back { lock { from=5775  to=22547 } }
+ CE /toolbox/side_front /toolbox/side_right { lock { from=16861  to=22547 } }
+ CE /toolbox/side_front /toolbox/handle { lock { from=9450  to=22547 } }
+ CE /toolbox/side_left /toolbox/side_back { lock { from=5775  to=22547 } }
+ CE /toolbox/side_left /toolbox/side_right { lock { from=16861  to=22547 } }
+ CE /toolbox/side_left /toolbox/handle { lock { from=9450  to=22547 } }
+ CE /toolbox/side_back /toolbox/side_right { lock { from=16861  to=22547 } }
+ CE /toolbox/side_back /toolbox/handle { lock { from=9450  to=22547 } }
+ CE /toolbox/side_right /toolbox/handle { lock { from=16861  to=22547 } }

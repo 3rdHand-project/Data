@@ -1,0 +1,26 @@
+{ "objects":
+    { "/chair/seating":
+        { "type":"seating",
+          "transformation" : [[0, 0, 0], [0, 0.707, 0.707, 0]],
+          "mesh" : "chair_seating.stl" },
+      "/chair/leg1": 
+        { "type":"leg",
+          "transformation" : [[0, 280, 0], [0, -0.707, 0.707, 0]],
+          "mesh" : "chair_leg.stl" },
+      "/chair/leg2":
+        { "type":"leg",
+          "transformation" : [[0, 280, 0], [0, -0.707, 0.707, 0]],
+          "mesh" : "chair_leg.stl" },
+      "/chair/leg3":
+        { "type":"leg",
+          "transformation" : [[0, 280, 0], [0, -0.707, 0.707, 0]],
+          "mesh" : "chair_leg.stl" },
+      "/chair/leg4":
+        { "type":"leg",
+          "transformation" : [[0, 280, 0], [0, -0.707, 0.707, 0]],
+          "mesh" : "chair_leg.stl" },
+      "/chair/back":
+        { "type":"back",
+          "transformation" : [[0, 335, -15], [0, 0, 0, -1]],
+          "mesh" : "chair_back.stl" } },
+  "root" : "/chair/seating" }

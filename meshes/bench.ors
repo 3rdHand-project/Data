@@ -1,0 +1,74 @@
+body /bench/seating {}
+shape sh/task/bench/seating  (/bench/seating) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/bench/seating (/bench/seating) {
+  type = 3
+  mesh = 'bench_sitting.stl'
+  meshscale = .001
+  rel = <T t(.1575 -.02 -.1575) q(.707 0 0 .707)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /bench/leg1 {}
+shape sh/task/bench/leg1 (/bench/leg1) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/bench/leg1 (/bench/leg1) {
+  type = 3
+  mesh = 'bench_leg.stl'
+  meshscale = .001
+  rel = <T t(-.0325 0 -.0325)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /bench/leg2 {}
+shape sh/task/bench/leg2 (/bench/leg2) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/bench/leg2 (/bench/leg2) {
+  type = 3
+  mesh = 'bench_leg.stl'
+  meshscale = .001
+  rel = <T t(-.0325 0 -.0325)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /bench/leg3 {}
+shape sh/task/bench/leg3 (/bench/leg3) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/bench/leg3 (/bench/leg3) {
+  type = 3
+  mesh = 'bench_leg.stl'
+  meshscale = .001
+  rel = <T t(-.0325 0 -.0325)>
+  # rel_includes_mesh_center
+  contact
+}
+
+body /bench/leg4 {}
+shape sh/task/bench/leg4 (/bench/leg4) {
+  type = 5
+  size = [ .05 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/bench/leg4 (/bench/leg4) {
+  type = 3
+  mesh = 'bench_leg.stl'
+  meshscale = .001
+  rel = <T t(-.0325 0 -.0325)>
+  # rel_includes_mesh_center
+  contact
+}

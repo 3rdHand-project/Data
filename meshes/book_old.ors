@@ -1,0 +1,13 @@
+body /book_old { }
+shape sh/task/book_old (/book_old) {
+  #type = -1
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/book_old (/book_old) {
+  type = 0
+  rel = <T t(-.0925 0 .0255)>
+  size = [ .21 .235 .035  0 ]
+  contact
+}

@@ -1,0 +1,44 @@
+body /human/th/thumb { }
+shape sh/task/human/th/thumb (/human/th/thumb) {
+  #type = -1
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/human/th/thumb (/human/th/thumb) {
+  type = 2
+  rel = <T t(0 0 .0075) t(0 0 .008) d(90 0 1 0)>
+  size = [ 0 0 .01 .0075 ]
+  color = [ 0 1 0 ]
+  contact
+}
+
+body /human/th/index { }
+shape sh/task/human/th/index (/human/th/index) {
+  #type = -1
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/human/th/index (/human/th/index) {
+  type = 2
+  rel = <T t(0 0 .0075) t(0 0 .008) d(90 0 1 0)>
+  size = [ 0 0 .01 .0075 ]
+  color = [ 0 1 0 ]
+  contact 
+}
+
+body /human/th/middle { }
+shape sh/task/human/th/middle (/human/th/middle) {
+  #type = -1
+  type = 5
+  size = [ .01 0 0 0 ]
+  color = [ 0 0 0 ]
+}
+shape sh/human/th/middle (/human/th/middle) {
+  type = 2
+  rel = <T t(0 0 .0075) t(0 0 .008) d(90 0 1 0)>
+  size = [ 0 0 .01 .0075 ]
+  color = [ 0 1 0 ]
+  contact
+}
