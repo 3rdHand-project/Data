@@ -1,0 +1,24 @@
+TS /human/rh /toolbox/side_front {
+  lock { from = 5440, to = 5930 }
+}
+TS /human/rh /toolbox/side_left {
+  lock { from = 1050, to = 1340 }
+  lock { from = 1870, to = 2050 }
+  lock { from = 5440, to = 5930 }
+}
+TS /human/lh /toolbox/side_front {
+  lock { from = 1590, to = 1730 }
+  lock { from = 1870, to = 2050 }
+  lock { from = 5930, to = 6120 }
+}
+TS /human/lh /toolbox/side_left {
+  lock { from = 5930, to = 6120 }
+}
+TS /human/th /toolbox/side_front {
+  lock { from = 1420, to = 1590 }
+  lock { from = 4900, to = 5440}
+}
+TS /human/th /toolbox/side_left {
+  lock { from = 830, to = 1080 }
+  lock { from = 4900, to = 5440}
+}

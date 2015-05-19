@@ -1,0 +1,47 @@
+# The 3rdHand data repository of the Inria group
+
+This repository contains the motion data of assembly tasks captured by the
+Inria group.
+
+## Installation
+
+No installation is required.  Installation of certain software packages may be
+required to run demo programs which show and utilize the data.
+
+## Documentation
+
+### Models
+
+The 'models/' folder contains object meshes.  Most files here are
+written in our ORS (Open Robot Simulator) format.  Eventually these will be
+converted to a more standard format, but for the time being you shouldn't care
+too much about these files;  they don't contain motion data, and will be used
+automatically by other programs, e.g. the visualization tools which we also
+provide.
+
+#### How to read the dataset.json format (python example):
+import json
+
+f = open("dataset.json")
+data = json.load(f)
+
+#### What's inside:
+### The top-level object is a dictionary with two entries:
+
+data["objects"] # is a list of all objects.  This is redundant information, since it is also contained in the corresponding scene.json file.
+
+data["data"] # is a list which contains all the tracking data.
+data["data"][<t_idx>]["time_sec"] # is a time in seconds (e.g. 0.018s)
+data["data"][<t_idx>][<obj>]["pose"] # is a pose in the format [[x, y, z], [x, y, z, w]]
+
+## If a measurement is missing for a given object <obj> at any given time index <t_idx> (e.g. in the case of occlusion), its entry is omitted altogether.
+
+## The structure may also contains other auxiliatory and reduntant fields, which you won't necessarily need. These are used directly by some of our internal software:
+
+data["data"][<t_idx>][<obj>]["velocity"] # is an instantaneous velocity
+data["data"][<t_idx>][<obj1>_<obj2>]["relative_pose"] # is the relative pose between two objects in the format [[x, y, z], [x, y, z,w]]
+data["data"][<t_idx>]["seating_leg1"]["relative_velocity_linear"] # is the relative linear velocity in the format [vx, vy, vz]
+data["data"][<t_idx>]["seating_leg1"]["relative_velocity_angular"] # is the relative angular velocity in the format [va, vb, vc]
+
+References for constraints:
+# data["chair_assembly_1"]["seating_back"] = [[x, y, z], [x, y, z,w]]

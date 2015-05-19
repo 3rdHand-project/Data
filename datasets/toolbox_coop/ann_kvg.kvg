@@ -1,0 +1,17 @@
+lock {
+  from = 
+  to = 
+  }
+
+TS /human/rh /toolbox/side_front {
+  }
+TS /human/rh /toolbox/side_left {
+  }
+TS /human/lh /toolbox/side_front {
+  }
+TS /human/lh /toolbox/side_left {
+  }
+TS /human/th /toolbox/side_front {
+  }
+TS /human/th /toolbox/side_left {
+  }

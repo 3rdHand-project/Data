@@ -1,0 +1,102 @@
+bases = [
+  /home/bais/git/mlr_3rdhanddata/datasets/bbox_n_book/
+  /home/bais/git/3rdHand_data/datasets/toolbox/
+  /home/bais/git/3rdHand_data/datasets/toolbox_coop/
+  /home/bais/git/3rdHand_data/datasets/chair/
+  /home/bais/git/3rdHand_data/datasets/bench/
+]
+
+dsets_train = [
+  toolbox_3
+]
+
+feats = [
+  var
+  lincoeff
+]
+
+task = play
+task = show
+task = json
+
+dsets = [
+  chair_assembly_4
+]
+  toolbox_3
+  bench_assembly_1
+
+json_filename = segmented_constraints.json
+
+dsets = [
+  toolbox_coop_1
+  toolbox_coop_2
+  toolbox_coop_3
+  toolbox_coop_4
+]
+
+dsets = [
+  bench_assembly_1
+  bench_assembly_2
+  bench_assembly_3
+  bench_assembly_4
+]
+
+interpolate = false
+interpolate = true
+
+load_model_params = true
+load_model_params = false
+
+thinning = 12
+thinning = 24
+wlen = 12
+wlen = 24
+wlen = 60
+wlen = 120
+wlen = 240
+
+nobs_past = 9
+nobs_future = 10
+
+thresh = .5
+nsplits = 10
+
+model = crf
+model = logreg
+
+transitions = true
+transitions = false
+
+output = maxlikelihood
+output = marginal
+
+vote_mode = majority
+vote_mode = average
+vote_mode = unanimous
+vote_mode = nega-unanimous
+
+whitening = none
+whitening = abs_mean
+whitening = std
+whitening = mean_std
+whitening = abs_max
+
+check_points = false
+check_points = true
+
+check_convex = false
+check_convex = true
+
+check_gradient = false
+check_gradient = true
+
+check_hessian = false
+check_hessian = true
+
+optim = rprop
+optim = newton
+optim = gradient_descent
+
+end_condition = 1e-2
+
+lambda = 0

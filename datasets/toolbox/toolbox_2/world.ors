@@ -1,5 +1,0 @@
-body world { fixed }
-
-%include meshes/handL_tim.ors
-%include meshes/handR_tim.ors
-%include meshes/toolbox.ors

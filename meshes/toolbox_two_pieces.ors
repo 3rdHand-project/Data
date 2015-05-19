@@ -9,7 +9,7 @@ shape sh/toolbox/side_front (/toolbox/side_front) {
   mesh = 'ToolboxPart2.stl'
   meshscale = .001
   rel = <T t(.02 -.06 .008)>
-  rel_includes_mesh_center
+  # rel_includes_mesh_center
   contact
 }
 
@@ -24,6 +24,6 @@ shape sh/toolbox/side_left (/toolbox/side_left) {
   mesh = 'ToolboxPart3.stl'
   meshscale = .001
   rel = <T t(0 .06 .008) d(180 0 0 1)>
-  rel_includes_mesh_center
+  # rel_includes_mesh_center
   contact
 }
