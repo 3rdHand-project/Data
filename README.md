@@ -1,6 +1,6 @@
 # 3rdHand Data Repository
 
-This repository contains the motion capture data collected by MLR and Inria.
+This repository contains the motion capture data collected by the 3rdHand consortium.
 
 ## datasets
 
