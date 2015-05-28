@@ -6,11 +6,7 @@
 #include <Mocap/g4data.h>
 #include <Mocap/mocapgui.h>
 #include "kf.h"
-// #include "gui.h"
 #include "optim.h"
-// #include "util.h"
-// #include "mocapplayer.h"
-// #include "kfgui.h"
 #include "thread.h"
 
 #include <unistd.h>
@@ -25,7 +21,7 @@ int main(int argc, char **argv) {
 
   StringA bases = MT::getParameter<StringA>("bases");
   StringA dsets_train = MT::getParameter<StringA>("dsets_train");
-  StringA dsets = MT::getParameter<StringA>("dsets");
+  String dset = MT::getParameter<String>("dset");
 
   MocapData mdata;
   // register data types
@@ -37,44 +33,13 @@ int main(int argc, char **argv) {
 
   mdata.base().append(bases);
 
-  // MocapRecL mreclist_train;
-  // MocapSeqL mseqlist_train;
-  // for(const String &dset_train: dsets_train) {
-  //   MocapRec &mrec_train = mdata.rec(dset_train);
-  //   mreclist_train.append(&mrec_train);
-  //   mseqlist_train.append(mrec_train.seqlist());
-  // }
-
-  // cout << "num train recordings: " << mreclist_train.N << endl;
-  // cout << "num train sequences:  " << mseqlist_train.N << endl;
-
   KF_CE_Model ce_model;
-  // ce_model.train(mseqlist_train);
   ce_model.train(mdata, dsets_train);
 
-  String task;
-  MT::getParameter<String>("task", task);
-
   // KF_ConstraintLL cllist;
-  for(const String &dset: dsets) {
-    MocapRec &mrec = mdata.rec(dset);
-    const KF_ConstraintL &clist = ce_model.constraints(mrec);
-    // cout << "CONSTRAINTS" << endl;
-    // if(task == "play")
-    //   ce_model.play(mrec);
-    // else if(task == "show") {
-    // cout << "SHOW" << endl;
-      ce_model.playConstraints(mrec, clist);
-    // }
-    // else {
-    //   cout << "NONE" << endl;
-    // }
-    // else if(task == "show")
-    //   ce_model.showConstraints(mrec, clist);
-    // cllist.append(new KF_ConstraintL(clist));
-  }
-  // if(task == "json")
-  //   save_json(cllist);
+  MocapRec &mrec = mdata.rec(dset);
+  const KF_ConstraintL &clist = ce_model.constraints(mrec);
+  ce_model.playConstraints(mrec, clist);
 }
 
 // void save_json(const KF_ConstraintLL &cllist) {

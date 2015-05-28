@@ -1,9 +1,9 @@
 bases = [
   /home/bais/git/mlr_3rdhanddata/datasets/bbox_n_book/
-  /home/bais/git/3rdHand_data/datasets/toolbox/
-  /home/bais/git/3rdHand_data/datasets/toolbox_coop/
-  /home/bais/git/3rdHand_data/datasets/chair/
-  /home/bais/git/3rdHand_data/datasets/bench/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/toolbox/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/toolbox_coop/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/chair/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/bench/
   /home/bais/git/3rdHand_software/thr_scenes/datasets/kevin/
 ]
 
@@ -11,8 +11,8 @@ target = NO_TARGET
 target = TS
 target = CE
 
-dset = bench_assembly_1
 dset = toolbox_coop_4
+dset = bench_assembly_1
 dset = toolbox_3
 dset = bbox_n_book_1
 dset = chair_assembly_2

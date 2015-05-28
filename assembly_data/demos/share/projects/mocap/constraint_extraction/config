@@ -1,9 +1,9 @@
 bases = [
   /home/bais/git/mlr_3rdhanddata/datasets/bbox_n_book/
-  /home/bais/git/3rdHand_data/datasets/toolbox/
-  /home/bais/git/3rdHand_data/datasets/toolbox_coop/
-  /home/bais/git/3rdHand_data/datasets/chair/
-  /home/bais/git/3rdHand_data/datasets/bench/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/toolbox/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/toolbox_coop/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/chair/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/bench/
 ]
 
 dsets_train = [
@@ -15,31 +15,15 @@ feats = [
   lincoeff
 ]
 
-task = play
-task = show
-task = json
-
-dsets = [
-  chair_assembly_4
-]
-  toolbox_3
-  bench_assembly_1
+dset = bench_assembly_1
+dset = chair_assembly_4
+dset = toolbox_3
+dset = toolbox_coop_1
+dset = toolbox_coop_2
+dset = toolbox_coop_3
+dset = toolbox_coop_4
 
 json_filename = segmented_constraints.json
-
-dsets = [
-  toolbox_coop_1
-  toolbox_coop_2
-  toolbox_coop_3
-  toolbox_coop_4
-]
-
-dsets = [
-  bench_assembly_1
-  bench_assembly_2
-  bench_assembly_3
-  bench_assembly_4
-]
 
 interpolate = false
 interpolate = true

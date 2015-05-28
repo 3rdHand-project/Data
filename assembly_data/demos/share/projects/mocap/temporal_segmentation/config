@@ -1,9 +1,9 @@
 bases = [
   /home/bais/git/mlr_3rdhanddata/datasets/bbox_n_book/
-  /home/bais/git/3rdHand_data/datasets/toolbox/
-  /home/bais/git/3rdHand_data/datasets/toolbox_coop/
-  /home/bais/git/3rdHand_data/datasets/chair/
-  /home/bais/git/3rdHand_data/datasets/bench/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/toolbox/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/toolbox_coop/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/chair/
+  /home/bais/git/3rdHand_data/assembly_data/datasets/bench/
 ]
 
 dsets_train = [
@@ -15,10 +15,9 @@ feats = [
   lincoeff
 ]
 
-dset = toolbox_coop_1
 dset = toolbox_3
+dset = toolbox_coop_1
 
-// dset = toolbox_2
 dset = bbox_n_book_4
 
 dset = bbox_n_book_2
