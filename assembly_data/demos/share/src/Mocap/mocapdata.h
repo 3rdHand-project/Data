@@ -76,7 +76,7 @@ stdOutPipe(MocapID);
 struct MocapRec: Parametric {
   String dir;
   MocapID mid;
-  MocapLabel mlabel;
+  MocapLabel mann, mlabel;
 
   KeyValueGraph kvg, kvgann;
 
@@ -103,6 +103,8 @@ struct MocapRec: Parametric {
 
   const MocapID &id() const;
   MocapID &id();
+  const MocapLabel &ann() const;
+  MocapLabel &ann();
   const MocapLabel &label() const;
   MocapLabel &label();
   bool checkTarget(Target target);

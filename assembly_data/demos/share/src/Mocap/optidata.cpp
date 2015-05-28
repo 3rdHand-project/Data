@@ -193,8 +193,9 @@ void OptiRec::load(const char *recdir) {
   appendBam("tstamp", tstamp);
 
   // loading annotation, if any..
+  KeyValueGraph kvgtmp;
   try {
-    FILE(STRING(recdir << "ann_kvg.kvg")) >> kvgann;
+    FILE(STRING(recdir << "ann_kvg.kvg")) >> kvgtmp;
   }
   catch(const char *e) {
     cout << "No annotations in " << recdir << "." << endl;
@@ -202,7 +203,7 @@ void OptiRec::load(const char *recdir) {
   uint from, to;
 
   arr *ann;
-  for(Item *pair: kvgann) {
+  for(Item *pair: kvgtmp) {
     ann = new arr(nframes);
     ann->setZero();
     if(!targets.contains(pair->keys(0)))
@@ -212,18 +213,27 @@ void OptiRec::load(const char *recdir) {
       agent_targets.append(pair->keys(0), new StringA());
     if(!object_targets.getItem(pair->keys(0)))
       object_targets.append(pair->keys(0), new StringA());
+
     StringA &a_targets = *agent_targets.getValue<StringA>(pair->keys(0));
     StringA &o_targets = *object_targets.getValue<StringA>(pair->keys(0));
+
     if(!a_targets.contains(pair->keys(1)))
       a_targets.append(pair->keys(1));
     if(!o_targets.contains(pair->keys(2)))
       o_targets.append(pair->keys(2));
+
     for(Item *lock: *pair->getValue<KeyValueGraph>()) {
       from = (uint)*lock->getValue<KeyValueGraph>()->getValue<double>("from");
       to = (uint)*lock->getValue<KeyValueGraph>()->getValue<double>("to");
       ann->subRange(from, to) = 1;
     }
-    pair->getValue<KeyValueGraph>()->append("ann", ann);
+
+    // pair->getValue<KeyValueGraph>()->append("ann", ann);
+    mlabel.append(pair->keys, ann);
+    mann.append(pair->keys, ann);
+    for(String &k1: mid.sensorsof(pair->keys(1)))
+      for(String &k2: mid.sensorsof(pair->keys(2)))
+        mlabel.append(STRINGS(pair->keys(0), k1, k2), ann);
   }
 }
 

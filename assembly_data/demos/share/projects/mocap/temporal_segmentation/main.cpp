@@ -18,6 +18,7 @@ int main(int argc, char **argv) {
   StringA dsets_train = MT::getParameter<StringA>("dsets_train");
   String dset = MT::getParameter<String>("dset");
 
+  cout << "Training datasets: " << dsets_train << endl;
   MocapData mdata;
   // register data types
   // TODO automate this in MocapData::MocapData()

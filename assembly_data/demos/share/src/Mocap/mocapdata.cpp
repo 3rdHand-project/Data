@@ -593,6 +593,8 @@ void MocapRec::save() {
 
 const MocapID &MocapRec::id() const { return mid; }
 MocapID &MocapRec::id() { return const_cast<MocapID &>(static_cast<const MocapRec&>(*this).id()); }
+const MocapLabel &MocapRec::ann() const { return mlabel; }
+MocapLabel &MocapRec::ann() { return const_cast<MocapLabel &>(static_cast<const MocapRec&>(*this).ann()); }
 const MocapLabel &MocapRec::label() const { return mlabel; }
 MocapLabel &MocapRec::label() { return const_cast<MocapLabel &>(static_cast<const MocapRec&>(*this).label()); }
 
@@ -1383,10 +1385,13 @@ void MocapSeq::init(const char *sens1, const char *sens2) {
 }
 
 void MocapSeq::setAnn(const String &target) {
-  arr &ann = *rec.label().getValue<arr>(STRINGS(target, sensor1, sensor2));
-  if(!ann.N)
+  arr *lab = rec.label().getValue<arr>(STRINGS(target, sensor1, sensor2));
+  if(lab == nullptr) {
+    ann.resize(0);
     ann_thin.resize(0);
+  }
   else {
+    ann = *lab;
     ann_thin.resize(nframes_thin);
     uint thinning = *params.get<uint>("thinning");
     for(uint f_thin = 0; f_thin < nframes_thin; f_thin++)

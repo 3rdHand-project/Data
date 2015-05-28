@@ -188,7 +188,12 @@ void G4Rec::load(const char *recdir) {
       to = (uint)*lock->getValue<KeyValueGraph>()->getValue<double>("to");
       ann->subRange(from, to) = 1;
     }
+
     // pair->getValue<KeyValueGraph>()->append("ann", ann);
     mlabel.append(pair->keys, ann);
+    mann.append(pair->keys, ann);
+    for(String &k1: mid.sensorsof(pair->keys(1)))
+      for(String &k2: mid.sensorsof(pair->keys(2)))
+        mlabel.append(STRINGS(pair->keys(0), k1, k2), ann);
   }
 }
