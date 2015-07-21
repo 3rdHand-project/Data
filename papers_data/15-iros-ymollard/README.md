@@ -17,8 +17,56 @@ Then the subject performs randomly either exercises A and then B or B and then A
 
 ## Content description
 
-The file **all_subjects_dump.yaml** is a dump of the data recorded by the system while the subject was performing the exercises, i.e. the time and effort in terms of number of clicks while correcting the constraints though the GUI and simulating the assembly. All the 14 subjects are aggregated into this YAML file. YAML format is easily readable in Python using the module of the same name.
+The file [all_subjects_dump.yaml](all_subjects_dump.yaml) is a dump of the data recorded by the system while the subject was performing the exercises, i.e. the time and effort in terms of number of clicks while correcting the constraints though the GUI and simulating the assembly. All the 14 subjects are aggregated into this YAML file. YAML format is easily readable in Python using the module of the same name.
 
 ## Content format
 
-TODO
+The file format is described through a moke example:
+
+```
+john:    # Unique subject name
+  blue_chair:    # Object (blue_chair or green_bench, redundant with the exercise)
+    'A':    # Exercise (A, B, C, or D)
+      num_attempts: 2    # john solved exercise A in 2 attempts
+      '0':  # Assembly attempt #0 over 2
+        effort:    # Measurement of effort provided to correct the constraints (number of clicks and time)
+          actions: {kfviews: 26,    # The user visualized some assembly steps (keyframes) 26 times 
+                    reordering: 4}    # The user made 4 changes in the plan by reordering its steps
+          back: {click: 1,    # The back has been clicked once (to give it the focus or trigger the contextual menu)
+                 kfviews: 6,    # Housekeeping data
+                 movex: 5,    # The back has been moved 5 times along X
+                 movey: 8,    # The back has been moved 8 times along Y
+                 movez: 6,    # The back has been moved 6 times along Z
+                 parent: 1,    # The parent of the back has been changed once
+                 reordering: 4,    # Housekeeping data
+                 rotx: 1,    # The back has been rotated once around X
+                 roty: 1,    # The back has been rotated once around Y
+                 rotz: 1}    # The back has been rotated once around Z
+          seating: {click: 6}    # The seating has been clicked 6 times (and no operation was made on its constraints)
+        corrected_plan:    # The assembly plan for this assembly attempt #0 after correction
+        - [mc2, seating, leg1]    # Step 1 attributes constraint mc2 to leg1 with parent seating 
+        - [mc3, seating, leg2]    # Step 2 attributes constraint mc3 to leg2 with parent seating 
+        - [mc4, seating, leg3]    # Step 3 attributes constraint mc4 to leg3 with parent seating 
+        - [mc5, seating, leg4]    # Step 4 attributes constraint mc5 to leg4 with parent seating 
+        - [mc1, seating, back]    # Step 5 attributes constraint mc1 to back with parent seating 
+        - wait    # The last step of all plans is always wait
+        corrected_precision:    # The precision measured for this assembly attempt #0 after correction with respect to ground truth
+          orientation: [0.04632476885626439, 0.04892203013021544, 0.03541035763741666,
+            0.009341378860458691, 0.002442223469800918]
+          position: [0.007897460392127359, 0.010246950765959597, 0.0067082042990198225,
+            0.005385164216364273, 0.003352116981704301]
+          reference_id: [c3, c1, c2, c4, c0]    # Housekeeping data
+        corrected_st:    # Symbols table giving geometrical values to each constraint ID
+          mc1: [-0.0014894702471792698,-0.003, 0.11986521631479263, -0.00019683582650031894,
+            -0.00604905653744936, 0.0011892152251675725, 0.9999809861183167, 0.0,
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]    # position (x, y, z in metres), orientation (the quaternion x, y, z, w), degrees of freedom in translation (-x, +x, -y, +y, -z, +z in metres) and degrees of freedom in orientation (RPY -x, +x, -y, +y, -z, +z in radians)
+          mc2:    # Next constraint in this symbols table...
+        loadings: [1424278244.2105181]    # Timestamps of all clicks on the "Load constraint" button loading either an empty plan or a plan extracted from demonstrations depending on the exercise
+        writings: [1424279232.2969055, 1424279306.7999418]  # Timestamps of all clicks on the "Submit constraints" button giving the signal that corrections are finished for this attempt. When length(writings)>1, the last timestamp corresponds to a validation of DoFs from the experimentor and must be ignored.
+      plan:    # Housekeeping data
+      symbols:    # Housekeeping data
+      state: success    # After simulation attempt #1 was a success 
+      '1':  # Assembly attempt #1 over 2 (i.e. the last one)
+        # [...]
+    'B':    # Next exercise...
+```
